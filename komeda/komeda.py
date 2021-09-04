@@ -40,6 +40,7 @@ def main():
             }, ignore_index=True)
       df.to_csv("./test.csv", mode='w', encoding='utf-8')
       print(f"success number: {i}")
+      
     except Exception as e:
       import traceback
       print(f"error number: {i} | {traceback.print_exc()}")
