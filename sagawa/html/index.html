@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>荷物番号テスト</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <h2>荷物番号テスト</h2>
+        <form action="index.html">
+            <label for="">Excelファイル名</label>
+            <input type="text" id="csv-name">
+            <button id="search" type="button">検索</button>
+            <textarea name="" id="search_result" cols="30" rows="10"></textarea>
+        </form>
+        <script type="text/javascript" src="./eel.js"></script>
+        <script>
+            var file_name = document.getElementById('csv-name')
+
+            search.addEventListener('click', () => {
+                eel.sagawa_search(file_name.value);
+            })
+            eel.expose(view_log_js)
+            function view_log_js(text){
+                document.getElementById('search_result').value += text + "\n";
+            }
+        </script>
+    </body>
+</html>
